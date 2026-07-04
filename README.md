@@ -55,3 +55,7 @@ Como ejemplo vamos a poner a la víctima (h2) a escuchar e inicia una inundació
 mininet> h2 tcpdump -i h2-eth0 -n &
 mininet> h1 hping3 -S --flood -V -p 80 10.0.0.2
 ```
+
+Guiarse con Captura 1 y Captura 2.
+
+
