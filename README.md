@@ -56,6 +56,9 @@ mininet> h2 tcpdump -i h2-eth0 -n &
 mininet> h1 hping3 -S --flood -V -p 80 10.0.0.2
 ```
 
-Guiarse con Captura 1 y Captura 2.
+Anexos y guias en:
+
+![Demostración del ataque 1:](Captura1.png)
+![Demostración del ataque 2:](Captura2.png)
 
 
