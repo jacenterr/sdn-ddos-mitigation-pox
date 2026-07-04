@@ -31,3 +31,27 @@ Copia el archivo `ddos_prevent.py` dentro de la carpeta `ext` de tu instalación
 **2. Iniciar el Controlador POX:**
 ```bash
 ./pox.py ddos_prevent
+``` 
+
+**3. Desplegar la topología en Mininet:**
+Crear una segunda terminal y ejecutar el comando:
+
+```bash
+sudo mn --controller=remote,ip=127.0.0.1,port=6633 --mac --switch=ovs,protocols=OpenFlow10 --topo=single,3
+```
+
+**4. Poblar las tablas ARP:**
+Agregar lo siguiente:
+
+```bash
+mininet> pingall
+```
+
+**5. Ahora probaremos el ataque:**
+
+Como ejemplo vamos a poner a la víctima (h2) a escuchar e inicia una inundación SYN desde el atacante (h1):
+
+```bash
+mininet> h2 tcpdump -i h2-eth0 -n &
+mininet> h1 hping3 -S --flood -V -p 80 10.0.0.2
+```
