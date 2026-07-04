@@ -1,5 +1,7 @@
 # sdn-ddos-mitigation-pox
 
+# Laboratorio de prevención de ataques DDoS (SYN Flood) automatizado usando SDN, POX y Mininet
+
 # Mitigación Automatizada de DDoS en Redes SDN 🛡️
 
 Este proyecto demuestra la implementación de un sistema de prevención de ataques volumétricos (DDoS SYN Flood) utilizando el paradigma de Redes Definidas por Software (SDN). 
